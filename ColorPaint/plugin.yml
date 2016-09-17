@@ -1,0 +1,13 @@
+name: ColorPaint
+version: 2.7.2
+author: YellowPhoenix18
+
+main: de.yellowphoenix18.colorpaint.Main
+
+commands:  
+  pb:
+    description: ColorPaint MainCommand
+    usage: /pb
+  paintball:
+    description: ColorPaint MainCommand
+    usage: /paintball
