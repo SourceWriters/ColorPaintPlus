@@ -11,7 +11,7 @@ public class MessagesConfig {
 	public static File f = new File("plugins/ColorPaint", "messages.yml");
 	public static FileConfiguration cfg = YamlConfiguration.loadConfiguration(f);
 	
-	public static String prefix = "§7[§bPaintball§7] §7.";
+	public static String prefix = "§7[§bPaintball§7] §7";
 	public static String dmk = "§7You killed §b%Player% §7.";
 	public static String dmp = "§7You were killed by §b%Killer% §7.";
 	public static String jm = "§7You joined §bPaintball §7.";
