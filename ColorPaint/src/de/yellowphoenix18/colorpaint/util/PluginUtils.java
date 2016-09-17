@@ -10,6 +10,7 @@ import org.bukkit.plugin.PluginManager;
 
 import de.yellowphoenix18.colorpaint.ColorPaint;
 import de.yellowphoenix18.colorpaint.autoupdate.UpdateChecker;
+import de.yellowphoenix18.colorpaint.commands.ColorPaintCommand;
 import de.yellowphoenix18.colorpaint.config.MainConfig;
 import de.yellowphoenix18.colorpaint.config.MessagesConfig;
 import de.yellowphoenix18.colorpaint.listener.DamageListener;
@@ -25,6 +26,7 @@ public class PluginUtils {
 	
 	public static void setUp() {
 		loadListener();
+		loadCommands();
 		
 		sendPackets();
 		updateScoreboard();		
@@ -57,7 +59,8 @@ public class PluginUtils {
 	}
 	
 	public static void loadCommands() {
-		
+		ColorPaint.m.getCommand("pb").setExecutor(new ColorPaintCommand());
+		ColorPaint.m.getCommand("paintball").setExecutor(new ColorPaintCommand());
 	}
 	
 	public static void updateScoreboard() {
