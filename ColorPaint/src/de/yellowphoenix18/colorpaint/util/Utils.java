@@ -24,7 +24,7 @@ import de.yellowphoenix18.colorpaint.config.MessagesConfig;
 
 public class Utils {
 	
-	public static File f = new File("plugins/ColorPaint" , "locations.yml");
+	public static File f = new File("plugins/ColorPaintPlus" , "locations.yml");
 	public static FileConfiguration cfg = YamlConfiguration.loadConfiguration(f);
 	
 	public static void setLocation(Location loc, String path) {
