@@ -86,7 +86,7 @@ public class UpdateChecker {
             return "";
         }
         if(isupdate){
-            return "§aColorPaintPlus has the newest Version";
+            return "§aColorPaintPlus is up to date";
         }else{
             return "§bColorPaintPlus §cneeds an update, lastest Version: §6" + latestversion + ". §bUse §6'/pb update' §bto update Paintball";
         }
