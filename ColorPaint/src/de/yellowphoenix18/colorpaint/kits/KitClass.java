@@ -39,9 +39,9 @@ public class KitClass {
 		cfg.set("Kits." + kitname + ".Eggs", eggs);		
 		try {
 			cfg.save(f);
-			p.sendMessage(MessagesConfig.name + "§aKit susessfully saved");
+			p.sendMessage(MessagesConfig.prefix + "§aKit susessfully saved");
 		} catch (IOException e) {
-			p.sendMessage(MessagesConfig.name + "§cError§7: §4Can't save Kit!");
+			p.sendMessage(MessagesConfig.prefix + "§cError§7: §4Can't save Kit!");
 			e.printStackTrace();
 		}	
 	}

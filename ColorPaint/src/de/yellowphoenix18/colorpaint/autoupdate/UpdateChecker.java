@@ -34,7 +34,7 @@ public class UpdateChecker {
             }
             is.close();
             fos.close();
-            p.sendMessage(MessagesConfig.name + "§aUpdate sussesfully!");
+            p.sendMessage(MessagesConfig.prefix + "§aUpdate sussesfully!");
         } catch (Exception e) {
         	e.printStackTrace();
         	ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
@@ -92,11 +92,11 @@ public class UpdateChecker {
         }
     }
 	
-	public static boolean needUpdate() {
+	public static boolean needUpdate(){
         String latestversion;
         boolean isupdate;
         try {
-            URL urlv = new URL("http://yellowphoenix18.de/update.php?plugin=colorpaintplus");
+            URL urlv = new URL("http://yellowphoenix18.de/versions/clp.php");
             BufferedReader in = new BufferedReader(new InputStreamReader(urlv.openStream()));
             latestversion = in.readLine();
             if(latestversion.equalsIgnoreCase(ColorPaint.m.getDescription().getVersion())){
@@ -106,7 +106,7 @@ public class UpdateChecker {
             }
             in.close();
         } catch (IOException e) {
-            System.out.println("[ColorPaintPlus] No Connection for Updating");
+            System.out.println("[Paintball] No Connection for Updating");
             return false;
         }
         if(isupdate){
@@ -114,7 +114,5 @@ public class UpdateChecker {
         }else{
             return true;
         }
-    }
-
-	
+    }	
 }

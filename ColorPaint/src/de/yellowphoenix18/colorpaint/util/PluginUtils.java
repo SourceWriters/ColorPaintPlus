@@ -31,7 +31,7 @@ public class PluginUtils {
 		sendPackets();
 		updateScoreboard();		
 		ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
-		console.sendMessage("§cThank you for using the Plugin ColorPaintPlus!");
+		console.sendMessage("§cThank you for using the Plugin ColorPaint!");
 		console.sendMessage(UpdateChecker.checkVersion());
 		if(UpdateChecker.needUpdate()) {
 			if(MainConfig.autoupdate == true) {
@@ -42,7 +42,7 @@ public class PluginUtils {
 		
 		for(Player all : Bukkit.getOnlinePlayers()) {
 			if(all.isOp()) {
-				all.sendMessage(MessagesConfig.name + UpdateChecker.checkVersion());
+				all.sendMessage(MessagesConfig.prefix + UpdateChecker.checkVersion());
 			}
 		}
 	}

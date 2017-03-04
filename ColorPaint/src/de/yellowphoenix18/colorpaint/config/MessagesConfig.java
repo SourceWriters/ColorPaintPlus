@@ -11,7 +11,7 @@ public class MessagesConfig {
 	public static File f = new File("plugins/ColorPaintPlus", "messages.yml");
 	public static FileConfiguration cfg = YamlConfiguration.loadConfiguration(f);
 	
-	public static String name = "§7[§bColorPaintPlus§7] §7.";
+	public static String prefix = "§7[§bColorPaintPlus§7] §7.";
 	public static String dmk = "§7You killed §b%Player% §7.";
 	public static String dmp = "§7You were killed by §b%Killer% §7.";
 	public static String jm = "§7You joined §bPaintball §7.";
@@ -209,7 +209,8 @@ public class MessagesConfig {
 			e.printStackTrace();
 		}
 		
-		name = cfg.getString("Messages.Prefix").replace("&", "§");
+		prefix = cfg.getString("Messages.Prefix").replace("&", "§");
+
 		dmk = cfg.getString("Messages.DeathMessage.Killer").replace("&", "§");
 		dmp = cfg.getString("Messages.DeathMessage.Player").replace("&", "§");
 		jm = cfg.getString("Messages.JoinMessage").replace("&", "§");

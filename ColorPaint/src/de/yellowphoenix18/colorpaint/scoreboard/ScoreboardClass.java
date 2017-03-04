@@ -75,8 +75,8 @@ public class ScoreboardClass {
 	
 	public static void updateScoreboard(Player p) {
 		Scoreboard b = Bukkit.getScoreboardManager().getNewScoreboard();
-		if (b.getObjective("ColorPaint") == null) {
-			Objective obj = b.registerNewObjective("ColorPaint", "dummy");
+		if (b.getObjective("Lobby") == null) {
+			Objective obj = b.registerNewObjective("Lobby", "dummy");
 			
 			obj.setDisplayName(MessagesConfig.scoreboard);
 			if(first != null) {
@@ -96,8 +96,7 @@ public class ScoreboardClass {
 			}
 			obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		} else {
-			Objective obj = b.getObjective("ColorPaint");
-			
+			Objective obj = b.getObjective("Lobby");			
 			if(first != null) {
 				obj.getScore(first.getName()).setScore(ColorPaint.kills.get(first));	
 			}

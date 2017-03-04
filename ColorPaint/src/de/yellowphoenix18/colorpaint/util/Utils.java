@@ -53,7 +53,7 @@ public class Utils {
 			Location loc = new Location(w, x, y, z, (float) yaw, (float) pitch);
 			p.teleport(loc);
 		} else {
-			p.sendMessage(MessagesConfig.name + "§4Error§7: §cLocation §4" + path + "§c is not valid!");
+			p.sendMessage(MessagesConfig.prefix + "§4Error§7: §cLocation §4" + path + "§c is not valid!");
 		}
 	}
 	
@@ -88,7 +88,8 @@ public class Utils {
 			teleportPlayer(p, "Spawn");
 	}
 	
-	public static ItemStack ItemStackCreator(String name, String lore1, String lore2, Material m, int a) {	
+	public static ItemStack ItemStackCreator(String name, String lore1, String lore2, Material m, int a) {
+		
 		List<String> list = new ArrayList<String>();
 		if(lore1 != null) {
 			list.add(lore1);
@@ -107,8 +108,9 @@ public class Utils {
 		return i;
 	}
 	
-	@SuppressWarnings("deprecation")
-	public static ItemStack SkullCreator(String name, String owner, String lore1, String lore2, int a) {	
+@SuppressWarnings("deprecation")
+public static ItemStack SkullCreator(String name, String owner, String lore1, String lore2, int a) {
+		
 		List<String> list = new ArrayList<String>();
 		if(lore1 != null) {
 			list.add(lore1);
@@ -130,7 +132,8 @@ public class Utils {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static ItemStack ItemStackCreatorID(String name, String lore1, String lore2, int typeid, int data, int a) {		
+	public static ItemStack ItemStackCreatorID(String name, String lore1, String lore2, int typeid, int data, int a) {
+		
 		List<String> list = new ArrayList<String>();
 		if(lore1 != null) {
 			list.add(lore1);
@@ -149,7 +152,8 @@ public class Utils {
 		return i;
 	}
 	
-	public static ItemStack LeatherCreator(String name, String lore1, String lore2, Material m, int a, Color c) {	
+	public static ItemStack LeatherCreator(String name, String lore1, String lore2, Material m, int a, Color c) {
+		
 		List<String> list = new ArrayList<String>();
 		if(lore1 != null) {
 			list.add(lore1);
@@ -169,7 +173,8 @@ public class Utils {
 		return i;		
 	}
 	
-	public static ItemStack DyeCreator(String name, String lore1, String lore2, int a, DyeColor c) {		
+	public static ItemStack DyeCreator(String name, String lore1, String lore2, int a, DyeColor c) {
+		
 		List<String> list = new ArrayList<String>();
 		if(lore1 != null) {
 			list.add(lore1);

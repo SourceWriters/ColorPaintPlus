@@ -8,7 +8,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 public class AchivementStats {
-	
+
 	public static File f = new File("plugins/ColorPaintPlus", "achivements.yml");
 	public static FileConfiguration cfg = YamlConfiguration.loadConfiguration(f);
 	

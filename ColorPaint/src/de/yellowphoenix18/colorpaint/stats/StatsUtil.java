@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import de.yellowphoenix18.colorpaint.config.MessagesConfig;
 
 public class StatsUtil {
-	
+
 	public static File f = new File("plugins/ColorPaintPlus", "stats.yml");
 	public static FileConfiguration cfg = YamlConfiguration.loadConfiguration(f);
 	
@@ -112,7 +112,7 @@ public class StatsUtil {
 			}
 			p.sendMessage("§7<>-----<§bRanking§7>-----<>");
 		} else {
-			p.sendMessage(MessagesConfig.name + "Can not load Ranking");
+			p.sendMessage(MessagesConfig.prefix + "Can not load Ranking");
 		}
 		
 		

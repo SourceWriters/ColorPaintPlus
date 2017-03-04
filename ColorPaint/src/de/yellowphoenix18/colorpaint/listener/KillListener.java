@@ -42,43 +42,43 @@ public class KillListener implements Listener {
 							ColorPaint.killstreak.put(p, 0);
 							if(ColorPaint.killstreak.get(k) == 5) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "5er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "5er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 10) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "10er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "10er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 15) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "15er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "15er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 20) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "20er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "20er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 25) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "25er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "25er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 50) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "50er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "50er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 75) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "75er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "75er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 100) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "100er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "100er").replace("%Player%", k.getName()));
 								}
 							}
 							k.playSound(k.getLocation(), Sound.LEVEL_UP, 1F, 1F);
-							k.sendMessage(MessagesConfig.name + MessagesConfig.dmk.replace("%Player%", p.getName()));
+							k.sendMessage(MessagesConfig.prefix + MessagesConfig.dmk.replace("%Player%", p.getName()));
 							if(k.getInventory().getItem(8).getAmount() < 15) {
 								k.getInventory().addItem(Utils.ItemStackCreator(MessagesConfig.ieat, MessagesConfig.ieast1, MessagesConfig.ieast2, Material.EGG, 2));
 							}
-							p.sendMessage(MessagesConfig.name + MessagesConfig.dmp.replace("%Killer%", k.getName()));
+							p.sendMessage(MessagesConfig.prefix + MessagesConfig.dmp.replace("%Killer%", k.getName()));
 						}
 						p.getInventory().clear();
 						KitClass.addKit(p);
@@ -104,45 +104,45 @@ public class KillListener implements Listener {
 							ColorPaint.killstreak.put(p, 0);
 							if(ColorPaint.killstreak.get(k) == 5) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "5er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "5er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 10) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "10er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "10er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 15) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "15er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "15er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 20) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "20er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "20er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 25) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "25er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "25er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 50) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "50er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "50er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 75) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "75er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "75er").replace("%Player%", k.getName()));
 								}
 							} else if(ColorPaint.killstreak.get(k) == 100) {
 								for(Player all : ColorPaint.painters) {
-									all.sendMessage(MessagesConfig.name + MessagesConfig.gak.replace("%KillStreak%", "100er").replace("%Player%", k.getName()));
+									all.sendMessage(MessagesConfig.prefix + MessagesConfig.gak.replace("%KillStreak%", "100er").replace("%Player%", k.getName()));
 								}
 							}
 							k.playSound(k.getLocation(), Sound.LEVEL_UP, 1F, 1F);
-							k.sendMessage(MessagesConfig.name + MessagesConfig.dmk.replace("%Player%", p.getName()));
+							k.sendMessage(MessagesConfig.prefix + MessagesConfig.dmk.replace("%Player%", p.getName()));
 							if(k.getInventory().getItem(7) != null) {
 								if(k.getInventory().getItem(7).getAmount() < 15) {
 									k.getInventory().addItem(Utils.ItemStackCreator(MessagesConfig.isat, MessagesConfig.isast1, MessagesConfig.isast2, Material.SNOW_BALL, 2));
 								}	
 							}
-							p.sendMessage(MessagesConfig.name + MessagesConfig.dmp.replace("%Killer%", k.getName()));
+							p.sendMessage(MessagesConfig.prefix + MessagesConfig.dmp.replace("%Killer%", k.getName()));
 						}
 						p.getInventory().clear();
 						KitClass.addKit(p);

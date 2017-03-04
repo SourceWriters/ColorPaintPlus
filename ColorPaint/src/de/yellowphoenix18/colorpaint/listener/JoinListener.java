@@ -23,7 +23,7 @@ public class JoinListener implements Listener {
 				}
 			}
 			if(p.isOp()) {
-				p.sendMessage(MessagesConfig.name + UpdateChecker.checkVersion());
+				p.sendMessage(MessagesConfig.prefix + UpdateChecker.checkVersion());
 			}
 		}
 	}

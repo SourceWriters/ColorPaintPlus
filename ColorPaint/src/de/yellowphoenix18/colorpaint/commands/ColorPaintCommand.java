@@ -29,7 +29,7 @@ public class ColorPaintCommand implements CommandExecutor {
 			Player p = (Player) sender;
 			if(cmd.getName().equalsIgnoreCase("pb") || cmd.getName().equalsIgnoreCase("paintball")) {
 					if(args.length == 0) {
-						p.sendMessage(MessagesConfig.name + "§cPlease enter /pb help.");
+						p.sendMessage(MessagesConfig.prefix + "§cPlease enter /pb help.");
 					} else if(args.length == 1) {
 						if(args[0].equalsIgnoreCase("help")) {
 							if(p.hasPermission("ColorPaint.Help")) {
@@ -45,7 +45,7 @@ public class ColorPaintCommand implements CommandExecutor {
 								p.sendMessage("§c/pb setquitsign <Arena> §7- §6Set the Sign for quitting the Arena");
 								p.sendMessage("§c/pb addkit <KitName> <Airstrikes> <UAirstrikes> <Landmines> <Paintballs> <Eggs>");
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nop);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nop);
 							}
 						} else if(args[0].equalsIgnoreCase("leave")) {
 							if(ColorPaint.painters.contains(p)) {
@@ -55,10 +55,10 @@ public class ColorPaintCommand implements CommandExecutor {
 								ColorPaint.colors.remove(p);
 								ColorPaint.killstreak.remove(p);
 								p.setGameMode(GameMode.SURVIVAL);
-								p.sendMessage(MessagesConfig.name + MessagesConfig.qm);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.qm);
 								p.getScoreboard().clearSlot(DisplaySlot.SIDEBAR);
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nip);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nip);
 							}
 						} else if(args[0].equalsIgnoreCase("stats")) {
 							StatsUtil.sendStats(p);
@@ -68,7 +68,7 @@ public class ColorPaintCommand implements CommandExecutor {
 							if(p.hasPermission("ColorPaint.Admin")) {
 								Bukkit.getPluginManager().disablePlugin(ColorPaint.m);
 								Bukkit.getPluginManager().enablePlugin(ColorPaint.m);
-								p.sendMessage(MessagesConfig.name + "§aPaintball susessfully reloadet.");
+								p.sendMessage(MessagesConfig.prefix + "§aPaintball susessfully reloadet.");
 							}
 						} else if(args[0].equalsIgnoreCase("update")) {
 							if(p.hasPermission("ColorPaint.Admin")) {
@@ -76,18 +76,18 @@ public class ColorPaintCommand implements CommandExecutor {
 									UpdateChecker.updateJar(p);
 									Bukkit.reload();
 								} else {
-									p.sendMessage(MessagesConfig.name + "§cNo Update available");
+									p.sendMessage(MessagesConfig.prefix + "§cNo Update available");
 								}
 							}
 						} else if(args[0].equalsIgnoreCase("setglobalspawn")) {
 							if(p.hasPermission("ColorPaint.Admin")) {
 								Utils.setLocation(p.getLocation(), "Paintball-Quit");
-								p.sendMessage(MessagesConfig.name + "§cPaintball-GlobalSpawn sussesfully set.");
+								p.sendMessage(MessagesConfig.prefix + "§cPaintball-GlobalSpawn sussesfully set.");
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nop);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nop);
 							}
 						} else {
-							p.sendMessage(MessagesConfig.name + MessagesConfig.nea);
+							p.sendMessage(MessagesConfig.prefix + MessagesConfig.nea);
 						}
 					} else if(args.length == 2) {
 						if(args[0].equalsIgnoreCase("setjoinsign")) {
@@ -101,15 +101,15 @@ public class ColorPaintCommand implements CommandExecutor {
 							            s.setLine(2, MessagesConfig.jsr3);
 							            s.setLine(3, args[1]);
 							            s.update();
-										p.sendMessage(MessagesConfig.name + "§cSussesfully set the JoinSign for Arena §6" + args[1] + " §c.");
+										p.sendMessage(MessagesConfig.prefix + "§cSussesfully set the JoinSign for Arena §6" + args[1] + " §c.");
 							        } else {
-							            p.sendMessage(MessagesConfig.name + "§cYou have to look at a sign!");
+							            p.sendMessage(MessagesConfig.prefix + "§cYou have to look at a sign!");
 							        }
 							     } else {
-							        p.sendMessage(MessagesConfig.name + "§cYou have to look at a sign!");
+							        p.sendMessage(MessagesConfig.prefix + "§cYou have to look at a sign!");
 							    }				
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nop);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nop);
 							}
 						} else if(args[0].equalsIgnoreCase("setquitsign")) {
 							if(p.hasPermission("ColorPaint.Admin")) {
@@ -122,30 +122,30 @@ public class ColorPaintCommand implements CommandExecutor {
 							            s.setLine(2, MessagesConfig.qsr3);
 							            s.setLine(3, args[1]);
 							            s.update();
-										p.sendMessage(MessagesConfig.name + "§cSussesfully set the QuitSign for Arena §6" + args[1] + " §c.");
+										p.sendMessage(MessagesConfig.prefix + "§cSussesfully set the QuitSign for Arena §6" + args[1] + " §c.");
 							        } else {
-							            p.sendMessage(MessagesConfig.name + "§cYou have to look at a sign!");
+							            p.sendMessage(MessagesConfig.prefix + "§cYou have to look at a sign!");
 							        }
 							     } else {
-							        p.sendMessage(MessagesConfig.name + "§cYou have to look at a sign!");
+							        p.sendMessage(MessagesConfig.prefix + "§cYou have to look at a sign!");
 							    }				
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nop);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nop);
 							}
 						} else {
-							p.sendMessage(MessagesConfig.name + MessagesConfig.nea);
+							p.sendMessage(MessagesConfig.prefix + MessagesConfig.nea);
 						}
 					} else if(args.length == 3) {
 						if(args[0].equalsIgnoreCase("setspawn")) {
 							if(p.hasPermission("ColorPaint.Admin")) {
 								int spawn = Integer.valueOf(args[2]);
 								Utils.setLocation(p.getLocation(), "Paintball-Arena." + args[1] + "." + spawn);
-								p.sendMessage(MessagesConfig.name + "§cSussesfully set Spawn §6" + spawn + " §cin Arena §6" + args[1] + " §c.");				
+								p.sendMessage(MessagesConfig.prefix + "§cSussesfully set Spawn §6" + spawn + " §cin Arena §6" + args[1] + " §c.");				
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nop);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nop);
 							}
 						} else {
-							p.sendMessage(MessagesConfig.name + MessagesConfig.nea);
+							p.sendMessage(MessagesConfig.prefix + MessagesConfig.nea);
 						}
 					} else if(args.length == 7) {
 						if(args[0].equalsIgnoreCase("addkit")) {
@@ -163,32 +163,32 @@ public class ColorPaintCommand implements CommandExecutor {
 												if(landmines <= 16) {
 													KitClass.saveKit(p, kitname, airstrikes, uairstrikes, landmines, paintballs, eggs);	
 												} else {
-													p.sendMessage(MessagesConfig.name + "§cThe limit for Landmines is by 16!");
+													p.sendMessage(MessagesConfig.prefix + "§cThe limit for Landmines is by 16!");
 												}
 											} else {
-												p.sendMessage(MessagesConfig.name + "§cThe limit for UAirstrikes is by 64!");
+												p.sendMessage(MessagesConfig.prefix + "§cThe limit for UAirstrikes is by 64!");
 											}
 										} else {
-											p.sendMessage(MessagesConfig.name + "§cThe limit for Aorstrikes is by 64!");
+											p.sendMessage(MessagesConfig.prefix + "§cThe limit for Aorstrikes is by 64!");
 										}
 									} else {
-										p.sendMessage(MessagesConfig.name + "§cThe limit for Paintballs is by 16!");
+										p.sendMessage(MessagesConfig.prefix + "§cThe limit for Paintballs is by 16!");
 									}
 								} else {
-									p.sendMessage(MessagesConfig.name + "§cThe limit for Eggs is by 16!");
+									p.sendMessage(MessagesConfig.prefix + "§cThe limit for Eggs is by 16!");
 								}		
 							} else {
-								p.sendMessage(MessagesConfig.name + MessagesConfig.nop);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.nop);
 							}
 						} else {
-							p.sendMessage(MessagesConfig.name + MessagesConfig.nea);
+							p.sendMessage(MessagesConfig.prefix + MessagesConfig.nea);
 						}
 					} else {
-						p.sendMessage(MessagesConfig.name + MessagesConfig.nea);
+						p.sendMessage(MessagesConfig.prefix + MessagesConfig.nea);
 					}
 			}
 		} else {
-			System.out.println("[ColorPaint]: You must be instanceof a Player!");
+			System.out.println("[ColorPaintPlus]: You must be instanceof a Player!");
 		}
 		return true;
 	}

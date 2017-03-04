@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 name: ColorPaintPlus
 version: 2.7.3
+=======
+name: ColorPaint
+version: 2.7.2
+>>>>>>> branch 'master' of https://github.com/YellowPhoenix18/ColorPaintPlus
 author: YellowPhoenix18
 
 main: de.yellowphoenix18.colorpaint.ColorPaint

@@ -20,7 +20,7 @@ public class QuitListener implements Listener {
 			ColorPaint.colors.remove(p);
 			ColorPaint.killstreak.remove(p);
 			p.setGameMode(GameMode.SURVIVAL);
-			p.sendMessage(MessagesConfig.name + MessagesConfig.qm);			
+			p.sendMessage(MessagesConfig.prefix + MessagesConfig.qm);
 		}
 	}
 

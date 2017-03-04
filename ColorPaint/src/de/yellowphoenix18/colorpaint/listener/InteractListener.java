@@ -46,7 +46,7 @@ public class InteractListener implements Listener {
 						} else {
 							if(!ColorPaint.muniregen.contains(p)) {
 								p.playSound(p.getLocation(), Sound.BURP, 1F, 1F);
-								p.sendMessage(MessagesConfig.name + MessagesConfig.ooa);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.ooa);
 								ColorPaint.muniregen.add(p);
 								Bukkit.getScheduler().scheduleSyncDelayedTask(ColorPaint.m, new Runnable() {
 									@Override
@@ -221,7 +221,7 @@ public class InteractListener implements Listener {
 						} else {
 							if(!ColorPaint.muniregen.contains(p)) {
 								p.playSound(p.getLocation(), Sound.BURP, 1F, 1F);
-								p.sendMessage(MessagesConfig.name + MessagesConfig.ooa);
+								p.sendMessage(MessagesConfig.prefix + MessagesConfig.ooa);
 								ColorPaint.muniregen.add(p);
 								Bukkit.getScheduler().scheduleSyncDelayedTask(ColorPaint.m, new Runnable() {
 									@Override
@@ -358,7 +358,7 @@ public class InteractListener implements Listener {
 						
 						
 					} else {
-						p.sendMessage(MessagesConfig.name + MessagesConfig.nepfa);
+						p.sendMessage(MessagesConfig.prefix + MessagesConfig.nepfa);
 					}
 			} else if(p.getItemInHand().getType() == Material.REDSTONE_BLOCK) {
 				e.setCancelled(true);
@@ -381,10 +381,10 @@ public class InteractListener implements Listener {
 							}			
 						}, 100);
 					} else {
-						p.sendMessage(MessagesConfig.name + MessagesConfig.nepfa);
+						p.sendMessage(MessagesConfig.prefix + MessagesConfig.nepfa);
 					}
 				} else {
-					p.sendMessage(MessagesConfig.name + MessagesConfig.wfa);
+					p.sendMessage(MessagesConfig.prefix + MessagesConfig.wfa);
 				}
 				
 			} else if(p.getItemInHand().getType() == Material.EGG) {
@@ -416,7 +416,7 @@ public class InteractListener implements Listener {
 						p.setHealth(20);
 						p.setFoodLevel(20);
 						KitClass.addKit(p);
-						p.sendMessage(MessagesConfig.name + MessagesConfig.jm);
+						p.sendMessage(MessagesConfig.prefix + MessagesConfig.jm);
 					} else if(s.getLine(0).equalsIgnoreCase(MessagesConfig.qsr1) &&
 							   s.getLine(1).equalsIgnoreCase(MessagesConfig.qsr2) &&
 							   s.getLine(2).equalsIgnoreCase(MessagesConfig.qsr3)) {
@@ -426,7 +426,7 @@ public class InteractListener implements Listener {
 						ColorPaint.colors.remove(p);
 						ColorPaint.killstreak.remove(p);
 						p.setGameMode(GameMode.SURVIVAL);
-						p.sendMessage(MessagesConfig.name + MessagesConfig.qm);
+						p.sendMessage(MessagesConfig.prefix + MessagesConfig.qm);
 						p.getScoreboard().clearSlot(DisplaySlot.SIDEBAR);
 					}
 				}
